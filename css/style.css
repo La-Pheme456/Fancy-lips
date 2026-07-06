@@ -10,7 +10,7 @@
     border: none!important;
 }
 :root {
-    --bg-color: #0c0c0b;
+    --bg-color: #000000;
     --orange: #FF7A00;
     --white: #fff;
     --gray: #bbb;
@@ -91,6 +91,9 @@ body {
     border-radius: 50%;
     background: var(--orange);
 }
+header nav .menu-btn {
+    display: none;
+}
 header {
     position: sticky;
     top: 0;
@@ -162,11 +165,11 @@ header nav .menu-content ul li a {
     font-size: 18px;
     cursor: pointer;
 }
-header nav .menu-content .menu-btn {
+header nav .menu-content .cart {
     margin: 10px;
     transition: 0.5s ease-in-out;
 }
-header nav .menu-content .menu-btn a {
+header nav .menu-content .cart a {
     display: inline-block;
     padding: 8px 15px 10px;
     background: var(--orange);
@@ -174,10 +177,10 @@ header nav .menu-content .menu-btn a {
     border-radius: 30px;
     font-size: 18px;
 }
-header nav .menu-content .menu-btn a i {
+header nav .menu-content .cart a i {
     font-size: 20px;
 }
-header nav .menu-content .menu-btn:hover {
+header nav .menu-content .cart a:hover {
     transform: scale(1.1);
 }
                             /* ================== HOME ==================== */
@@ -345,6 +348,11 @@ header nav .menu-content .menu-btn:hover {
     object-fit: cover;
     border-radius: 15px;
 }
+#choose .col-md-3:nth-child(2) .box, 
+#choose .col-md-3:nth-child(3) .box,
+#choose .col-md-3:nth-child(4) .box {
+    padding-bottom: 30px;
+}
 #choose .box {
     background: #1a1a1a;
     padding: 20px 30px;
@@ -363,7 +371,6 @@ header nav .menu-content .menu-btn:hover {
     padding: 10px;
     background: #312317;
     color: var(--orange);
-    /* transition: 0.5s ease-in-out; */
     cursor: pointer;
     transition: 0.8s ease-in-out;
 }
@@ -385,8 +392,27 @@ header nav .menu-content .menu-btn:hover {
     font-size: 14px;
     margin-top: 20px;
 }
-
-
+#choose .formulated {
+    margin-top: 10%;
+}
+#choose .formulated .img {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+#choose .formulated .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#choose .formulated .heading h2 {
+    text-align: left;
+    margin-top: 0;
+}
+#choose .formulated .heading p {
+    text-align: left;
+}
 
 
 
@@ -468,3 +494,61 @@ header nav .menu-content .menu-btn:hover {
 }
 
 
+@media (max-width: 982px) {
+    header nav .menu-content {
+        display: inline-block;
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        background: black;
+        text-align: left;
+        transform: translateX(-100%);
+        transition: 0.5s ease-in-out;
+        z-index: 200;
+    }
+   header nav.active .menu-content {
+        transform: translateX(0);
+    }
+    header nav.active .menu-content ul li {
+        display: flex;
+    }
+    header nav .menu-btn {
+        display: inline-block;
+        position: relative;
+        width: 30px;
+        height: 5px;
+        background: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    header nav .menu-btn::after,
+    header nav .menu-btn::before {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 5px;
+        background: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+    }
+    header nav .menu-btn::before {
+        top: -10px;
+    }
+    header nav .menu-btn::after {
+        bottom: -10px;
+    }
+    header nav.active .menu-btn {
+        background: transparent;
+    }
+    header nav.active .menu-btn::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    header nav.active .menu-btn::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+}
