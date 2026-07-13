@@ -19,6 +19,9 @@
     --righteous: 'Righteous', cursive;
     --work-sans: 'Work Sans', sans-serif;
 }
+body {
+    overflow-x: hidden;
+}
 .heading h2 {
     margin-top: 9%;
     text-align: center;
@@ -104,7 +107,7 @@ header {
     width: 100%;
     height: auto;
     background: #0c0c0bd5;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(9px);
     z-index: 100;
 }
 header nav {
@@ -351,7 +354,7 @@ header nav .menu-content .cart a:hover {
 #choose .col-md-3:nth-child(2) .box, 
 #choose .col-md-3:nth-child(3) .box,
 #choose .col-md-3:nth-child(4) .box {
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 #choose .box {
     background: #1a1a1a;
@@ -413,6 +416,141 @@ header nav .menu-content .cart a:hover {
 #choose .formulated .heading p {
     text-align: left;
 }
+#choose .formulated .list {
+    margin-top: 35px;
+    text-align: left;
+    margin-left: -25px;
+}
+#choose .formulated .list ul li {
+    color: var(--white);
+    font-size: 16px;
+    margin-bottom: 18px;
+    text-align: left;
+}
+#choose .formulated .list ul li i {
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    padding-bottom: 15px;
+    padding-left: 4px;
+    border-radius: 50%;
+    background: var(--orange);
+    margin-right: 10px;
+}
+#choose .formulated .explore {
+    margin-top: 30px;
+    transition: 0.5s ease-in-out;
+    background: transparent;
+}
+#choose .formulated .explore a {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--orange);
+    color: var(--text-color);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+}
+#choose .formulated .explore:hover {
+    transform: scale(1.1);
+}
+#ready .ready {
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+    padding: 5% 0;
+    margin-top: 7%;
+    background: rgba(16, 13, 11);
+}
+#ready .ready .heading h2 {
+    margin-top: 0;
+    font-size: 60px;
+}
+#ready .ready .heading p {
+    margin-top: 20px;
+    color: var(--gray);
+}
+#ready .ready .get {
+    width: 300px;
+    height: auto;
+    text-align: center;
+    margin: 30px auto;
+    transition: 0.5s ease-in-out;
+}
+#ready .ready .get a {
+    display: inline-block;
+    padding: 20px 40px;
+    background: var(--orange);
+    color: var(--text-color);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+}
+#ready .ready .get:hover {
+    transform: scale(1.05);
+}
+footer {
+    width: 100%;
+    height: auto;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    padding: 3% 0;
+    margin-top: 7%;
+    text-align: left;
+}
+footer .row {
+    box-shadow:  0 2px 0 rgba(245, 242, 242, 0.2);
+    padding: 20px 0;
+}
+footer h2 {
+    font-family: var(--righteous);
+    margin-top: 0;
+    font-size: 30px;
+    color: var(--text-color);
+}
+footer h2 span {
+    color: var(--orange);
+}
+footer p {
+    color: var(--gray);
+    margin-top: 10px;
+    font-size: 15px;
+}
+footer .icon {
+    display: flex;
+    gap: 20px;
+}
+footer .icon i {
+    font-size: 20px;
+    color: var(--gray);
+}
+footer .head h2 {
+    font-size: 17px;
+    margin-top: 5px;
+    color: var(--text-color);
+    font-family: var(--work-sans);
+}
+footer .list {
+    display: inline-block;
+    margin-left: -30px;
+    margin-top: 5px;
+}
+footer .list ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+footer .list ul li a {
+    color: var(--gray);
+}
+footer .text-2 p {
+    text-align: center;
+    color: var(--gray);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+
 
 
 
@@ -494,60 +632,92 @@ header nav .menu-content .cart a:hover {
 }
 
 
+
+
+
+
+                /*=================== MEDIA QUERIES ==================== */
+
 @media (max-width: 982px) {
     header nav .menu-content {
-        display: inline-block;
         position: fixed;
-        top: 100%;
+        top: 0;
         left: 0;
-        width: 50%;
+        right: 0;
+        width: 100%;
         height: 100vh;
         background: black;
-        text-align: left;
-        transform: translateX(-100%);
-        transition: 0.5s ease-in-out;
+        text-align: center;
+        transform: translateX(100%);
+         opacity: 0;
+        visibility: hidden;
+        transition: transform 0.5s ease-in-out,
+                opacity 0.5s ease-in-out;
         z-index: 200;
     }
-   header nav.active .menu-content {
+    header nav.active .menu-content {
+        display: block;
         transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    header nav.active .menu-content ul {
+        margin-top: 10%;
+        margin-left: -30px;
+        display: block;
     }
     header nav.active .menu-content ul li {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
     }
-    header nav .menu-btn {
+    header nav.active .menu-content ul li a {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    header nav .btn {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        z-index: 999;
+    }
+    header nav .btn .menu-btn {
         display: inline-block;
         position: relative;
-        width: 30px;
-        height: 5px;
+        width: 25px;
+        height: 2px;
         background: #fff;
         border-radius: 3px;
         cursor: pointer;
     }
-    header nav .menu-btn::after,
-    header nav .menu-btn::before {
+    header nav .btn .menu-btn::after,
+    header nav .btn .menu-btn::before {
         position: absolute;
         content: '';
-        width: 30px;
-        height: 5px;
+        width: 25px;
+        height: 2px;
         background: #fff;
         border-radius: 3px;
         cursor: pointer;
         transition: 0.5s ease-in-out;
     }
-    header nav .menu-btn::before {
-        top: -10px;
+    header nav .btn .menu-btn::before {
+        left: 0.5px;
+        top: -9px;
     }
-    header nav .menu-btn::after {
-        bottom: -10px;
+    header nav .btn .menu-btn::after {
+        bottom: -9px;
+        left: 0.5px;
     }
-    header nav.active .menu-btn {
+    header nav.active .btn .menu-btn {
         background: transparent;
     }
-    header nav.active .menu-btn::before {
+    header nav.active .btn .menu-btn::before {
         top: 0;
         transform: rotate(45deg);
     }
-    header nav.active .menu-btn::after {
+    header nav.active .btn .menu-btn::after {
         bottom: 0;
         transform: rotate(-45deg);
     }

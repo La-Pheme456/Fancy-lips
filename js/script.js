@@ -1,4 +1,4 @@
-var menuBtn = document.querySelector('.menu-btn'),
+var menuBtn = document.querySelector('.btn'),
     menuCont = document.querySelector('nav');
 function showMenu () {
     menuCont.classList.toggle('active')
