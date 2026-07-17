@@ -3,4 +3,4 @@ var menuBtn = document.querySelector('.btn'),
 function showMenu () {
     menuCont.classList.toggle('active')
 }
-    menuBtn.addEventListener('click', showMenu);
+menuBtn.addEventListener('click', showMenu);

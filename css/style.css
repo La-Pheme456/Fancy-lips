@@ -35,6 +35,9 @@
     color: var(--gray);
     margin-top: 10px;
 }
+html {
+    overflow-x: hidden;
+}
 body {
     background: var(--bg-color);
     color: var(--text-color);
@@ -104,8 +107,8 @@ header {
     align-items: center;
     width: 100%;
     height: auto;
-    background: var(--bg-color);
-    backdrop-filter: blur(3px);
+    background: #0b0b0bb6;
+    backdrop-filter: blur(15px);
     z-index: 100;
 }
 header nav {
@@ -114,7 +117,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 6%;
+    padding: 10px 3%;
 }
 header nav .logo h2 {
     font-family: var(--righteous);
@@ -136,7 +139,7 @@ header nav .menu-content ul {
     cursor: pointer;
     margin: 10px;
 }
-header nav .menu-content li {
+header nav .menu-content ul li {
     position: relative;
     display: inline-block;
     padding: 10px 15px;
@@ -158,6 +161,7 @@ header nav .menu-content ul li::after {
 }
 header nav .menu-content ul li:hover::after {
     width: 80%;
+    color: var(--orange);
 }
 header nav .menu-content ul li a {
     text-decoration: none;
@@ -628,12 +632,99 @@ footer .text-2 p {
   color: #bbb;
   font-size: 14px;
 }
-                /*======================= CONTACT ========================== */
+/*======================= CONTACT ========================== */
+#get {
+    background: #fff;
+}
+#get .touch h2 {
+    margin-top: 7%;
+}
+#get .touch .touch-cont {
+    margin-top: 5%;
+}
 #get .touch .touch-cont form {
     width: 100%;
     height: auto;
-    background: --var(--bg-color);
+    background: #1a1a1a;
+    padding: 40px 50px;
+    border-radius: 25px;
+    transition: 1s ease-in-out;
 }
+#get .touch .touch-cont form:hover {
+    box-shadow: 0 0 2px var(--gray);
+}
+#get .touch .touch-cont form h2 {
+    font-size: 30px;
+    font-weight: none;
+    margin-top: 0;
+    text-align: left;
+    margin-left: -10px;
+}
+#get .touch .touch-cont form i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+#get .touch .touch-cont form .cont-1 {
+    margin-top: 20px;
+}
+#get .touch .touch-cont form .cont-1 label {
+    display: block;
+    font-size: 14px;
+    margin-top: 0;
+}
+#get .touch .touch-cont form label {
+    display: block;
+    font-size: 14px;
+    margin-top: 30px;
+}
+#get .touch .touch-cont form .cont-1 input {
+    width: 100%;
+    background: var(--bg-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: var(--gray);
+    font-size: 16px;
+    margin-top: 8px;
+}
+#get .touch .touch-cont form .cont-1 input:focus {
+    outline: 1px solid var(--orange) !important;
+}
+#get .touch .touch-cont form textarea,
+#get .touch .touch-cont form select {
+    width: 100%;
+    background: var(--bg-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--gray);
+    margin-top: 8px;
+}
+#get .touch .touch-cont form textarea {
+    padding: 20px 15px;
+    padding-bottom: 70px;
+}
+#get .touch .touch-cont form textarea:focus {
+    outline: 1px solid var(--orange);
+}
+#get .touch .touch-cont form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    background: var(--orange);
+    color: var(--text-color);
+    border-radius: 25px;
+}
+#get .touch .touch-cont .box {
+    background: #1a1a1a;
+    border-radius: 15px;
+    transition: 1s ease-in-out;
+}
+#get .touch .touch-cont .box:hover {
+    border: 2px solid var(--orange);
+}
+
+
 
 
 
@@ -641,40 +732,42 @@ footer .text-2 p {
                 /*=================== MEDIA QUERIES ==================== */
 
 @media (max-width: 982px) {
+    header {
+        z-index: 9999;
+    }
+    header nav {
+        padding: 10px 0;
+    }
+    header nav .logo {
+        padding: 0 10px;
+    }
     header nav .menu-content {
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        inset: 0;
         width: 100%;
         height: 100vh;
         background: black;
+        display: block;
         text-align: center;
         transform: translateX(100%);
-         opacity: 0;
+        transition: transform .5s ease;
+        opacity: 0;
         visibility: hidden;
-        transition: transform 0.5s ease-in-out,
-                opacity 0.5s ease-in-out;
-        z-index: 200;
+        /* z-index: 9999; */
     }
     header nav.active .menu-content {
-        display: block;
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
     }
-    header nav.active .menu-content ul {
-        margin-top: 10%;
-        margin-left: -30px;
-        display: block;
+    header nav .menu-content ul {
+        margin: 10% 0 0;
     }
-    header nav.active .menu-content ul li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    header nav .menu-content ul li {
+        display: block;
         padding: 15px 0;
     }
-    header nav.active .menu-content ul li a {
+    header nav .menu-content ul li a {
         font-size: 25px;
         font-weight: 700;
     }
@@ -692,6 +785,7 @@ footer .text-2 p {
         background: #fff;
         border-radius: 3px;
         cursor: pointer;
+        margin: 20px;
     }
     header nav .btn .menu-btn::after,
     header nav .btn .menu-btn::before {
