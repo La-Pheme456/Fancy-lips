@@ -46,55 +46,108 @@
 
     
     <section id="get">
-        <div class="touch">
-            <div class="heading text-center">
-                <h2 style="font-size: 60px;">Get in <span>Touch</span></h2>
-                <p>Have a question or need assistance? We'd love to hear from you. Send us a<br> message and we'll respond as soon as possible.</p>
-            </div>
-            <div class="touch-cont">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <form>
-                                <div class="heading">
-                                    <h2 class="fs-2" style="text-align: left;"><span><i class="bi bi-chat mx-3"></i></span>Send Us a Message</h2>
-                                </div>
-                                <div class="cont-1">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="name">Your Name</label>
-                                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="email">Your Email</label>
-                                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                                        </div>
+        <div class="container-fluid px-5">
+            <div class="touch">
+                <div class="heading text-center">
+                    <h2 style="font-size: 60px;">Get in <span>Touch</span></h2>
+                    <p>Have a question or need assistance? We'd love to hear from you. Send us a<br> message and we'll respond as soon as possible.</p>
+                </div>
+                <div class="row pt-5 g-5">
+                    <div class="col-lg-8">
+                        <form>
+                            <div class="heading">
+                                <h2 class="fs-2" style="text-align: left;"><span><i class="bi bi-chat mx-3"></i></span>Send Us a Message</h2>
+                            </div>
+                            <div class="cont-1">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" id="email" name="email" placeholder="Your Email" required>
                                     </div>
                                 </div>
+                            </div>
 
-                                <label for="subject">Subject</label>
-                                <select id="subject" name="subject">
-                                    <option value="select a subject">select a subject</option>
-                                    <option value="General Inquiry">General Inquiry</option>
-                                    <option value="Product Question">Product Question</option>
-                                    <option value="Order Support">Order Support</option>
-                                    <option value="Partnership Oppotunity">Partnership Oppotunity</option>
-                                    <option value="Feedback">Feedback</option>
-                                </select>
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="select a subject">select a subject</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Product Question">Product Question</option>
+                                <option value="Order Support">Order Support</option>
+                                <option value="Partnership Oppotunity">Partnership Oppotunity</option>
+                                <option value="Feedback">Feedback</option>
+                            </select>
 
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                                <button type="submit">Send Message</button>
-                            </form>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="box d-flex justify-content-around">
-                                <div class="icon">
-                                    <i class="bi bi-telephone"></i>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="box">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="icon">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <h2>phone</h2>
-                                    <p>(555) 123-4567</p>
+                                <div class="col-md-6">
+                                    <div class="text">
+                                        <h2>phone</h2>
+                                        <p>(555) 123-4567</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="icon">
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text">
+                                        <h2>Email</h2>
+                                        <p>hello@fancylips.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="icon">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text">
+                                        <h2>Address</h2>
+                                        <p>123 Beauty Lane, Los Angeles, CA 90210</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="icon">
+                                        <i class="bi bi-clock"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text">
+                                        <h2>Business Hours</h2>
+                                        <p>Mon-Fri: 9AM-6PM PST</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="text-2">
+                                    <h2>Follow Us</h2>
+                                </div>
+                                <div class="icons">
+                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                                    <a href="#"><i class="bi bi-youtube"></i></a>
                                 </div>
                             </div>
                         </div>

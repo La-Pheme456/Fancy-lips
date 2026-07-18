@@ -633,16 +633,14 @@ footer .text-2 p {
   font-size: 14px;
 }
 /*======================= CONTACT ========================== */
-#get {
-    background: #fff;
-}
 #get .touch h2 {
     margin-top: 7%;
 }
-#get .touch .touch-cont {
+#get .touch {
+    padding: 0;
     margin-top: 5%;
 }
-#get .touch .touch-cont form {
+#get .touch form {
     width: 100%;
     height: auto;
     background: #1a1a1a;
@@ -650,34 +648,34 @@ footer .text-2 p {
     border-radius: 25px;
     transition: 1s ease-in-out;
 }
-#get .touch .touch-cont form:hover {
-    box-shadow: 0 0 2px var(--gray);
+#get .touch form:hover {
+    box-shadow: 0 0 5px var(--gray);
 }
-#get .touch .touch-cont form h2 {
+#get .touch form h2 {
     font-size: 30px;
     font-weight: none;
     margin-top: 0;
     text-align: left;
     margin-left: -10px;
 }
-#get .touch .touch-cont form i {
+#get .touch form i {
     font-size: 25px;
     margin-right: 10px;
 }
-#get .touch .touch-cont form .cont-1 {
+#get .touch form .cont-1 {
     margin-top: 20px;
 }
-#get .touch .touch-cont form .cont-1 label {
+#get .touch form .cont-1 label {
     display: block;
     font-size: 14px;
     margin-top: 0;
 }
-#get .touch .touch-cont form label {
+#get .touch form label {
     display: block;
     font-size: 14px;
     margin-top: 30px;
 }
-#get .touch .touch-cont form .cont-1 input {
+#get .touch form .cont-1 input {
     width: 100%;
     background: var(--bg-color);
     padding: 10px 15px;
@@ -686,11 +684,11 @@ footer .text-2 p {
     font-size: 16px;
     margin-top: 8px;
 }
-#get .touch .touch-cont form .cont-1 input:focus {
+#get .touch form .cont-1 input:focus {
     outline: 1px solid var(--orange) !important;
 }
-#get .touch .touch-cont form textarea,
-#get .touch .touch-cont form select {
+#get .touch form textarea,
+#get .touch form select {
     width: 100%;
     background: var(--bg-color);
     padding: 10px 15px;
@@ -699,14 +697,14 @@ footer .text-2 p {
     color: var(--gray);
     margin-top: 8px;
 }
-#get .touch .touch-cont form textarea {
+#get .touch form textarea {
     padding: 20px 15px;
-    padding-bottom: 70px;
+    padding-bottom: 15%;
 }
-#get .touch .touch-cont form textarea:focus {
+#get .touch form textarea:focus {
     outline: 1px solid var(--orange);
 }
-#get .touch .touch-cont form button {
+#get .touch form button {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
@@ -715,14 +713,68 @@ footer .text-2 p {
     color: var(--text-color);
     border-radius: 25px;
 }
-#get .touch .touch-cont .box {
+#get .touch .box .row {
+    width: 400px;
+    text-align: left;
     background: #1a1a1a;
+    margin-bottom: 20px;
+    padding: 10px 0;
     border-radius: 15px;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
-#get .touch .touch-cont .box:hover {
-    border: 2px solid var(--orange);
+#get .touch .box .row:hover {
+    border: 2px solid var(--orange) !important;
 }
+#get .touch .box .row .icon {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 17px 10px 10px 15px;
+    margin-left: 10px;
+    padding: 10px;
+    background: #312317;
+    color: var(--orange);
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+}
+#get .touch .box .row .icon i {
+    margin-left: 5px;
+    font-size: 25px;
+}
+#get .touch .box .row .text {
+    margin-left: -60%;
+}
+#get .touch .box .row .text h2 {
+    font-weight: 700;
+    font-size: 20px;
+}
+#get .touch .box .row .text p {
+    color: var(--gray);
+    font-size: 15px;
+}
+#get .touch .box .row .text-2 h2 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#get .touch .box .row:nth-child(5) {
+    padding: 0;
+}
+#get .touch .box .row .icons i {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 10px 10px 10px 15px;
+    margin-left: 10px;
+    padding: 10px;
+    background: #312317;
+    color: var(--orange);
+    cursor: pointer;
+}
+
 
 
 
