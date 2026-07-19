@@ -561,41 +561,38 @@ footer .text-2 p {
 
 
                         /* ================== ABOUT ==================== */
+#about .heading h2 {
+    font-size: 60px;
+    margin-top: 12%;
+}
+#about .heading p {
+}
 .timeline {
-  width: 80%;
-  margin: auto;
-  position: relative;
-  padding-left: 60px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    padding-left: 60px;
 }
-
-/* vertical line */
 .timeline::before {
-  content: "";
-  position: absolute;
-  left: 79px;
-  top: 0;
-  width: 0.6px;
-  height: 100%;
-  background: var(--orange);
+    content: "";
+    position: absolute;
+    left: 79px;
+    top: 0;
+    width: 0.6px;
+    height: 100%;
+    background: var(--orange);
 }
-
-/* item */
 .timeline-item {
-  position: relative;
-  margin-bottom: 40px;
-
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease;
+    position: relative;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
 }
-
-/* when visible */
 .timeline-item.show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
-
-/* dot (perfectly centered on line) */
 .timeline-item::before {
     content: "";
     position: absolute;
@@ -606,33 +603,37 @@ footer .text-2 p {
     background: var(--orange);
     border-radius: 50%;
     margin-left: -9px;
-    /* transform: translateX(-50%); */
     transition: 1s ease-in-out;
 }
 .timeline-item:hover::before {
     transform: scale(1.5);
 }
-
-
 .card {
-  background: #1a1a1a;
-  padding: 20px 25px;
-  border-radius: 15px;
-  margin-left: 40px;
-  border: 1px solid #2a2a2a;
+    background: #1a1a1a;
+    padding: 20px 25px;
+    border-radius: 15px;
+    margin-left: 40px;
+    border: 1px solid #2a2a2a;
 }
-
-/* year */
 .card h3 {
-  color: var(--orange);
-  margin-bottom: 8px;
+    color: var(--orange);
+    margin-bottom: 8px;
 }
 
 .card p {
-  color: #bbb;
-  font-size: 14px;
+    color: #bbb;
+    font-size: 14px;
 }
-/*======================= CONTACT ========================== */
+
+
+
+
+
+
+
+
+
+                /*======================= CONTACT ========================== */
 #get .touch h2 {
     margin-top: 12%;
 }
