@@ -35,14 +35,14 @@
     color: var(--gray);
     margin-top: 10px;
 }
-html {
+/* html {
     overflow-x: hidden;
-}
+} */
 body {
     background: var(--bg-color);
     color: var(--text-color);
     font-family: var(--work-sans);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .preloader {
     position: fixed;
@@ -564,8 +564,6 @@ footer .text-2 p {
 #about .heading h2 {
     font-size: 60px;
     margin-top: 12%;
-}
-#about .heading p {
 }
 .timeline {
     width: 80%;
