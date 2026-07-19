@@ -99,7 +99,7 @@ header nav .menu-btn {
     display: none;
 }
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -634,7 +634,7 @@ footer .text-2 p {
 }
 /*======================= CONTACT ========================== */
 #get .touch h2 {
-    margin-top: 7%;
+    margin-top: 12%;
 }
 #get .touch {
     padding: 0;
@@ -714,11 +714,11 @@ footer .text-2 p {
     border-radius: 25px;
 }
 #get .touch .box .row {
-    width: 400px;
+    display: flex;
     text-align: left;
     background: #1a1a1a;
+    padding: 15px 0;
     margin-bottom: 20px;
-    padding: 10px 0;
     border-radius: 15px;
     transition: 0.5s ease-in-out;
 }
@@ -740,10 +740,11 @@ footer .text-2 p {
 }
 #get .touch .box .row .icon i {
     margin-left: 5px;
-    font-size: 25px;
+    font-size: 20px;
 }
 #get .touch .box .row .text {
-    margin-left: -60%;
+    margin-left: 20px;
+    margin-top: -8px;
 }
 #get .touch .box .row .text h2 {
     font-weight: 700;
@@ -774,8 +775,35 @@ footer .text-2 p {
     color: var(--orange);
     cursor: pointer;
 }
-
-
+#ask .heading h2 {
+    font-size: 40px;
+}
+#ask .box {
+    text-align: left;
+    background: #1a1a1a;
+    margin-top: 40px;
+    padding: 30px 30px;
+    padding-right: 10%;
+    border-radius: 15px;
+}
+#ask .box h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--orange);
+}
+#ask .box p {
+    font-size: 13px;
+    color: var(--gray);
+    margin-bottom: 0;
+}
+#ask .visit {
+    box-shadow: 0 0 1.9px rgba(255, 255, 255, 5);
+    text-align: center;
+    margin-top: 40px;
+    background: linear-gradient(to bottom right, #ff7b00e0, #000);
+    padding: 8% 0;
+    border-radius: 20px;
+}
 
 
 
