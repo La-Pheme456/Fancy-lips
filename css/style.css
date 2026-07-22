@@ -608,49 +608,51 @@ header nav .menu-content .cart a:hover {
 
 
 
-                            /* ================ SERVICES ================ */
-#services .heading h2 {
-font-size: 60px;
-margin-top: 12%;
-}
-#services .content .cont .box {
-width: 100%;
-height: auto;
-background: #1a1a1a;
-padding: 20px 25px;
-border-radius: 25px;
-transition: 1s ease-in-out;
-}
-#services .content .cont .box:hover {
 
-box-shadow: 0 0 5px var(--gray);
-}
-#services .content .cont .box .icon {
-height: 70px;
-width: 70px;
-display: inline-block;
-border-radius: 15px;
-margin: 17px 10px 10px 15px;
-margin-left: 10px;
-padding: 10px;
-background: #312317;
-color: var(--orange);
-cursor: pointer;
-transition: 0.8s ease-in-out;
-}
-#services .content .cont .box .icon i {
-margin-left: 5px;
-font-size: 35px;
-}
-#services .content .cont .box .text h2 {
-font-size: 23px;
-margin: 20px 0;
-font-weight: 700;
-}
-#services .content .cont .box .text p {
-color: var(--gray);
-font-size: 16px;
-}
+                                /* ================ SERVICES ================ */
+    #services .heading h2 {
+    font-size: 60px;
+    margin-top: 5%;
+    }
+    #services .content .cont .box {
+    width: 100%;
+    height: auto;
+    margin-top: 15%;
+    background: #1a1a1a;
+    padding: 20px 30px;
+    border-radius: 25px;
+    transition: 1s ease-in-out;
+    }
+    #services .content .cont .box:hover {
+    
+    box-shadow: 0 0 5px var(--gray);
+    }
+    #services .content .cont .box .icon {
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 17px 10px 10px 15px;
+    margin-left: 10px;
+    padding: 10px;
+    background: #312317;
+    color: var(--orange);
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+    }
+    #services .content .cont .box .icon i {
+    margin-left: 5px;
+    font-size: 35px;
+    }
+    #services .content .cont .box .text h2 {
+    font-size: 23px;
+    margin: 20px 0;
+    font-weight: 700;
+    }
+    #services .content .cont .box .text p {
+    color: var(--gray);
+    font-size: 16px;
+    }
 
 
 
