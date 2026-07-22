@@ -623,6 +623,12 @@ header nav .menu-content .cart a:hover {
     border-radius: 25px;
     transition: 1s ease-in-out;
 }
+#services .content .cont .col-md-4:nth-child(3) .box {
+    padding-bottom: 17%;
+}
+#services .content .cont .col-md-4:nth-child(2) .box {
+    padding-bottom: 11%;
+}
 #services .content .cont .box:hover {   
     box-shadow: 0 0 5px var(--gray);
 }
