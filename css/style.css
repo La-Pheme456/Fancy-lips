@@ -643,7 +643,10 @@ header nav .menu-content .cart a:hover {
     background: #312317;
     color: var(--orange);
     cursor: pointer;
-    transition: 0.8s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+#services .content .cont .box .icon:hover {
+    transform: rotate(360deg);
 }
 #services .content .cont .box .icon i {
     margin-left: 5px;
@@ -671,6 +674,65 @@ header nav .menu-content .cart a:hover {
     color: var(--orange);
     font-size: 20px;
 }
+#work .head  h2{
+    margin-top: 5%;
+    font-size: 50px;
+    font-family: var(--righteous);
+    text-align: center;
+}
+#work .head  h2 span {
+    color: var(--orange);
+}
+#work .number h2 {
+    position: relative;
+    display: inline-block;
+    margin-left: 20%;
+    font-size: 70px;
+    font-family: var(--righteous);
+    color: rgba(255, 122, 0, 0.2);
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+#work .number h2:hover {
+    transform: scale(1.1);
+}
+#work .number h2::after{
+    position: absolute;
+    content: '';
+    bottom: 22%;
+    left: 100%;
+    width: 300%;
+    height: 2px;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #ff7b00e0, #000);
+    opacity: 1;
+}
+#work .number .col-md-3:nth-child(2) h2::after,
+#work .number .col-md-3:nth-child(3) h2::after {
+    position: absolute;
+    content: '';
+    bottom: 22%;
+    left: 100%;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(to bottom right, #ff7b00e0, #000);
+}
+#work .number .col-md-3:last-child h2::after {
+    display: none;
+}
+#work .number .text h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+#work .number .text p {
+    text-align: center;
+    color: var(--gray);
+}
+
+
+
 
 
 
