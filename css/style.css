@@ -623,7 +623,7 @@ header nav .menu-content .cart a:hover {
     padding-bottom: 17%;
 }
 #services .content .cont .col-md-4:nth-child(2) .box {
-    padding-bottom: 11%;
+    padding-bottom: 16%;
 }
 #services .content .cont .box:hover {   
     box-shadow: 0 0 5px var(--gray);
@@ -725,6 +725,41 @@ header nav .menu-content .cart a:hover {
 #work .number .text p {
     text-align: center;
     color: var(--gray);
+}
+#work .box {
+    box-shadow: 0 0 1.9px rgba(255, 255, 255, 5);
+    text-align: center;
+    margin-top: 60px;
+    background: linear-gradient(to bottom right, #ff7b00e0, #f89f57);
+    padding: 4% 7%;
+    border-radius: 20px;
+}
+#work .box .icon {
+    font-size: 50px;
+}
+#work .box .text-2 h2 {
+    font-size: 50px;
+    font-weight: 600;
+}
+#work .box .text-2 p {
+    font-size: 18px;
+}
+#need {
+    text-align: center;
+}
+#need .heading p {
+    font-size: 18px;
+    color: var(--gray);
+}
+#need .btn a {
+    display: inline-block;
+    padding: 15px;
+    background: var(--orange);
+    color: var(--text-color);
+    border-radius: 30px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 
