@@ -13,7 +13,7 @@
     --bg-color: #0b0b0b;
     --orange: #FF7A00;
     --white: #fff;
-    --gray: #bbb;
+    --gray: #ffffff8c;
     --text-color: #fff;
     --indie-flower: 'Indie Flower', cursive;
     --righteous: 'Righteous', cursive;
@@ -548,25 +548,39 @@ header nav .menu-content .cart a:hover {
     margin-top: 5%;
 }
 #value .cont {
-    margin-top: 4%;
+    margin: 4% 0;
+    margin-bottom: 8%;
     text-align: center;
 }
 #value .cont .icn {
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     display: inline-block;
-    border-radius: 15px;
+    border-radius: 50%;
     margin: 17px 10px 10px 15px;
     margin-left: 10px;
     padding: 10px;
-    background: #312317;
+    padding-top: 15px;
+    background: #23160a;
     color: var(--orange);
     cursor: pointer;
-    transition: 0.5s ease-in-out;
+    transition: 1s ease-in-out;
+}
+#value .cont .icn:hover {
+    transform: rotate(360deg) scale(1.2);
 }
 #value .cont .icn i {
-    margin-left: 1px;
+    margin-top: 150px;
     font-size: 35px;
+}
+#value .cont .text h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+#value .cont .text p {
+    color: var(--gray);
+    font-size: 16px;
 }
 
 
@@ -606,7 +620,7 @@ header nav .menu-content .cart a:hover {
     background: var(--orange);
     border-radius: 50%;
     margin-left: -9px;
-    transition: 1s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .timeline-item:hover::before {
     transform: scale(1.5);
@@ -621,11 +635,12 @@ header nav .menu-content .cart a:hover {
 .card h3 {
     color: var(--orange);
     margin-bottom: 8px;
+    font-family: var(--righteous);
 }
 
 .card p {
-    color: #bbb;
-    font-size: 14px;
+    color: var(--gray);
+    font-size: 16px;
 }
 
 
