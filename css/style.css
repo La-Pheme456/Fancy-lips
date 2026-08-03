@@ -543,6 +543,33 @@ header nav .menu-content .cart a:hover {
     object-fit: cover;
     border-radius: 15px;
 }
+#value .heading h2 {
+    font-size: 40px;
+    margin-top: 5%;
+}
+#value .cont {
+    margin-top: 4%;
+    text-align: center;
+}
+#value .cont .icn {
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 17px 10px 10px 15px;
+    margin-left: 10px;
+    padding: 10px;
+    background: #312317;
+    color: var(--orange);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+#value .cont .icn i {
+    margin-left: 1px;
+    font-size: 35px;
+}
+
+
 .timeline {
     width: 80%;
     margin: auto;
@@ -647,7 +674,7 @@ header nav .menu-content .cart a:hover {
 #services .content .cont .box .icon i {
     margin-left: 5px;
     font-size: 35px;
-    }
+}
 #services .content .cont .box .text h2 {
     font-size: 23px;
     margin: 20px 0;
@@ -923,12 +950,12 @@ header nav .menu-content .cart a:hover {
     border-radius: 15px;
 }
 #ask .box h2 {
-    font-size: 16px;
+    font-size: 23px;
     font-weight: 700;
     color: var(--orange);
 }
 #ask .box p {
-    font-size: 13px;
+    font-size: 16px;
     color: var(--gray);
     margin-bottom: 0;
 }
