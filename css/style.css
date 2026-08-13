@@ -582,8 +582,6 @@ header nav .menu-content .cart a:hover {
     color: var(--gray);
     font-size: 16px;
 }
-
-
 .timeline {
     width: 80%;
     margin: auto;
@@ -662,6 +660,28 @@ header nav .menu-content .cart a:hover {
     margin-top: -6px;
     color: var(--orange);
 }
+#team .mission {
+    box-shadow: 0 0 1.9px rgba(255, 255, 255, 5);
+    text-align: center;
+    margin-top: 60px;
+    background: linear-gradient(to bottom right, #ff7b00e0, #f89f57);
+    padding: 4% 6%;
+    border-radius: 20px;
+}
+#team .mission i {
+    font-size: 40px;
+}
+#team .mission h2 {
+    font-family: var(--righteous);
+    font-size: 45px;
+    font-weight: 500;
+
+}
+#team .mission p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
 
 
 
