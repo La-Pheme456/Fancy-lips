@@ -504,6 +504,9 @@ header nav .menu-content .cart a:hover {
     font-size: 60px;
     margin-top: 5%;
 }
+#about .heading p {
+    padding: 20px 20%;
+}
 #about .container-fluid {
     padding: 0 5%;
 }
