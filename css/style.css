@@ -917,6 +917,10 @@ header nav .menu-content .cart a:hover {
     font-size: 60px;
     margin-top: 5%;
 }
+#services .heading p {
+    padding: 20px 20%;
+}
+
 #services .content .cont .box {
     width: 100%;
     height: auto;
@@ -1435,14 +1439,15 @@ footer .text-2 p {
         margin-bottom: 20px;
     }
 }
-@media (max-width: 421px) {
+@media (max-width: 422px) {
     #about .heading h2,
      #services .heading h2 {
         font-size: 40px;
     }    
     #about .heading p,
     #services .heading p{
-        font: 16px;
+        font-size: 17px;
+        padding: 0 10px;
     }
     #get .touch form {
         padding: 40px 10px;
