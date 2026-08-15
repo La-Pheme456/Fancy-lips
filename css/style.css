@@ -1447,7 +1447,8 @@ footer .text-2 p {
 }
 @media (max-width: 422px) {
     #about .heading h2,
-     #services .heading h2 {
+     #services .heading h2,
+     #collections .heading h2 {
         font-size: 40px;
     }    
     #about .heading p,
@@ -1458,7 +1459,6 @@ footer .text-2 p {
     }
     #collections .vari .filter-btn {
         padding: 0 15px;
-        font-size: 14px;
     }
     #get .touch form {
         padding: 40px 10px;
