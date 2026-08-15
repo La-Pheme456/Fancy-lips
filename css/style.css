@@ -1456,6 +1456,10 @@ footer .text-2 p {
         font-size: 17px;
         padding: 0 10px;
     }
+    #collections .vari .filter-btn {
+        padding: 0 15px;
+        font-size: 14px;
+    }
     #get .touch form {
         padding: 40px 10px;
     }
