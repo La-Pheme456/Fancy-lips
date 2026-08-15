@@ -1445,7 +1445,8 @@ footer .text-2 p {
         font-size: 40px;
     }    
     #about .heading p,
-    #services .heading p{
+    #services .heading p,
+    #colllections .heading p {
         font-size: 17px;
         padding: 0 10px;
     }
