@@ -792,29 +792,49 @@ header nav .menu-content .cart a:hover {
     margin-top: 5%;
 }
 #collections .vari {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     margin-top: 5%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
 }
+
+#collections .vari::-webkit-scrollbar {
+    display: none;
+}
+
+#collections .vari .row {
+    margin: 0;
+}
+
+#collections .vari .col-md {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: max-content;
+    min-width: 100%;
+}
+
 #collections .vari .filter-btn {
-    display: inline-block;
-    padding: 0 30px;
-    background: rgba(26, 26, 26);
+    flex: 0 0 auto;
+    padding: 0 20px;
+    background: #1a1a1a;
     color: var(--text-color);
     border-radius: 30px;
-    margin: 10px;
-    font-size: 16px;
-    font-weight: 600;
-} 
+    margin: 10px 0;
+}
+
 #collections .vari .filter-btn .btns {
-    display: inline-block;
+    display: block;
+    padding: 12px 15px;
     background: transparent;
     color: var(--text-color);
-    border-radius: 30px;
-    margin: 10px;
     font-size: 16px;
     font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
 }
 #collections .product .img {
     position: relative;
@@ -1457,8 +1477,22 @@ footer .text-2 p {
         font-size: 17px;
         padding: 0 10px;
     }
+    #collections .vari .col-md {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
     #collections .vari .filter-btn {
-        padding: 0 15px;
+        width: calc((100% - 16px) / 3);
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    #collections .vari .filter-btn .btns {
+        width: 100%;
+        padding: 10px 5px;
+        font-size: 14px;
     }
     #get .touch form {
         padding: 40px 10px;
