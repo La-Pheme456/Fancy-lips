@@ -1479,6 +1479,9 @@ footer .text-2 p {
         padding: 10px 5px;
         font-size: 14px;
     }
+    #collections .product .img .col-md-6 {
+        margin: 20px 0;
+    }
     #get .touch form {
         padding: 40px 10px;
     }
