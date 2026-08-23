@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Navigation Toggle
+
+    /* =========================================
+       1. MOBILE NAVIGATION TOGGLE
+       ========================================= */
+
     const menuBtn = document.querySelector('.btn');
     const menuCont = document.querySelector('nav');
 
@@ -9,48 +13,114 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Timeline Animation Initialization
+
+    /* =========================================
+       2. ACTIVE NAVIGATION PAGE
+       ========================================= */
+
+    let currentPage = window.location.pathname.split('/').pop();
+
+    // If there is no filename, use index.html
+    if (currentPage === '') {
+        currentPage = 'index.html';
+    }
+
+    const navLinks = document.querySelectorAll(
+        'header nav .menu-content ul li a'
+    );
+
+    navLinks.forEach(link => {
+
+        let linkPage = link.getAttribute('href');
+
+        // Make sure the link exists
+        if (!linkPage) return;
+
+        // Remove # from links such as about.html#section
+        linkPage = linkPage.split('#')[0];
+
+        // Add active class to current page
+        if (linkPage === currentPage) {
+            link.parentElement.classList.add('active');
+        }
+
+    });
+
+
+    /* =========================================
+       3. TIMELINE ANIMATION
+       ========================================= */
+
     const timelineItems = document.querySelectorAll('.timeline-item');
+
     timelineItems.forEach(item => {
         item.classList.add('show');
     });
 
-<<<<<<< Updated upstream
-    // 3. Product Filter Functionality
-    const filterButtons = document.querySelectorAll('.filter-btn .btns');
-    
-    // Direct child selector (>) prevents selecting the nested .col-md-6 price columns
-    const productItems = document.querySelectorAll('.product > .row > .col-md-3');
 
-    // Set first button ("All") active by default
+    /* =========================================
+       4. PRODUCT FILTER
+       ========================================= */
+
+    const filterButtons = document.querySelectorAll(
+        '.filter-btn .btns'
+    );
+
+    const productItems = document.querySelectorAll(
+        '.product > .row > .col-md-3'
+    );
+
+
+    // Set "All" button active by default
     if (filterButtons.length > 0) {
         filterButtons[0].classList.add('active');
     }
 
+
     filterButtons.forEach(button => {
+
         button.addEventListener('click', () => {
-            // Update active button state
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Remove active from all filter buttons
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active to clicked button
             button.classList.add('active');
 
-            const filterValue = button.textContent.trim().toLowerCase();
 
-            // Match product category
+            // Get selected category
+            const filterValue = button.textContent
+                .trim()
+                .toLowerCase();
+
+
+            // Filter products
             productItems.forEach(item => {
-                const categoryElement = item.querySelector('.price p');
-                const category = categoryElement ? categoryElement.textContent.trim().toLowerCase() : '';
 
-                if (filterValue === 'all' || category === filterValue) {
+                const categoryElement = item.querySelector(
+                    '.price p'
+                );
+
+                const category = categoryElement
+                    ? categoryElement.textContent.trim().toLowerCase()
+                    : '';
+
+
+                if (
+                    filterValue === 'all' ||
+                    category === filterValue
+                ) {
                     item.style.display = '';
                 } else {
                     item.style.display = 'none';
                 }
+
             });
+
         });
+
     });
+
 });
-=======
-const navItems = document.querySelectorAll(
-    'header nav .menu-content ul li'
-);
->>>>>>> Stashed changes

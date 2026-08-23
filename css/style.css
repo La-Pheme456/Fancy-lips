@@ -1,39 +1,45 @@
-
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+﻿@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    outline: none!important;
-    text-decoration: none!important;
-    border: none!important;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
 }
+
 @view-transition {
     navigation: auto;
 }
-::view-transition-group(*){
+
+::view-transition-group(*) {
     animation-duration: 1s;
 }
-::view-transition-old(root){
-    animation: slide-out .5s ease forwards;
+
+::view-transition-old(root) {
+    animation: slide-out 0.5s ease forwards;
 }
-::view-transition-new(root){
-    animation: slide-in .5s ease forwards;
+
+::view-transition-new(root) {
+    animation: slide-in 0.5s ease forwards;
 }
+
 @keyframes slide-out {
     to {
         transform: translateX(-80px);
     }
 }
+
 @keyframes slide-in {
     from {
         opacity: 0;
         transform: translateX(80px);
     }
 }
+
 :root {
     --bg-color: #0b0b0b;
     --orange: #FF7A00;
@@ -44,6 +50,7 @@
     --righteous: 'Righteous', cursive;
     --work-sans: 'Work Sans', sans-serif;
 }
+
 html {
     overflow-x: clip;
 }
@@ -54,10 +61,12 @@ body {
     font-family: var(--work-sans);
     overflow-x: clip;
 }
+
 @keyframes load {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         visibility: hidden;
@@ -69,15 +78,18 @@ body {
         transform: translate(-50%, -50%) scale(1);
         opacity: 0.3;
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.2);
         opacity: 0.7;
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 0.3;
     }
 }
+
 .preloader {
     position: fixed;
     top: 0;
@@ -124,9 +136,6 @@ body {
     border-radius: 50%;
 }
 
-/* ============================================= */
-/* HEADER AND NAVIGATION */
-/* ============================================= */
 header {
     position: sticky;
     top: 0;
@@ -148,7 +157,6 @@ header nav {
     padding: 15px 5%;
 }
 
-/* Hamburger Button Container */
 header nav .btn {
     display: none;
     cursor: pointer;
@@ -158,7 +166,6 @@ header nav .btn {
     margin: 0;
 }
 
-/* Logo Styles */
 header nav .logo h2 {
     font-family: var(--righteous);
     font-weight: 400;
@@ -167,19 +174,21 @@ header nav .logo h2 {
     cursor: pointer;
     transition: transform 0.4s ease-in-out;
 }
+
 header nav .logo h2:hover {
     transform: scale(1.05);
 }
+
 header nav .logo h2 span {
     color: var(--orange);
 }
 
-/* Menu Styles */
 header nav .menu-content {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 header nav .menu-content ul {
     display: flex;
     align-items: center;
@@ -187,25 +196,26 @@ header nav .menu-content ul {
     padding: 0;
     list-style: none;
 }
+
 header nav .menu-content ul li {
     position: relative;
     padding: 8px 16px;
 }
 
-/* Refined Underline Effect */
 header nav .menu-content ul li a {
     position: relative;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--text-color) !important;
     text-decoration: none;
     transition: color 0.3s ease;
     display: inline-block;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    font-family: var(--work-sans);
 }
 
-header nav .menu-content ul li::after {
-    position: absolute;
+header nav .menu-content ul li a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -218,18 +228,18 @@ header nav .menu-content ul li::after {
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-header nav .menu-content ul li:hover::after {
+header nav .menu-content ul li:hover a::after {
     width: 80%;
-    color: var(--orange);
 }
 
-header nav .menu-content ul li a {
-    font-size: 18px;
-    color: var(--black) !important;
-    cursor: pointer;
-    text-decoration: none;
-    font-family: var(--Allura);
+header nav .menu-content ul li.active a {
+    color: var(--orange) !important;
 }
+
+header nav .menu-content ul li.active a::after {
+    width: 80%;
+}
+
 header nav .menu-content .cart {
     margin: 0;
 }
@@ -247,14 +257,15 @@ header nav .menu-content .cart a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+header nav .menu-content .cart a::after {
+    display: none;
+}
+
 header nav .menu-content .cart a:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(255, 122, 0, 0.4);
 }
 
-/* ============================================= */
-/* REUSABLE HEADING STYLES */
-/* ============================================= */
 .heading h2 {
     margin-top: 9%;
     text-align: center;
@@ -274,9 +285,6 @@ header nav .menu-content .cart a:hover {
     margin-top: 10px;
 }
 
-/* ============================================= */
-/* BANNER / HOME SECTION */
-/* ============================================= */
 #banner {
     display: flex;
     justify-content: center;
@@ -284,7 +292,6 @@ header nav .menu-content .cart a:hover {
     margin-top: 7%;
 }
 
-/* Banner Text */
 #banner .shine .text p {
     position: relative;
     font-size: 18px;
@@ -299,7 +306,11 @@ header nav .menu-content .cart a:hover {
     left: 20%;
     width: 120%;
     height: 700%;
-    background: radial-gradient(circle, rgba(255,122,0,0.6) 0%, transparent 70%);
+    background: radial-gradient(
+        circle,
+        rgba(255, 122, 0, 0.6) 0%,
+        transparent 70%
+    );
     border-radius: 200%;
     filter: blur(20px);
     transform: translate(-50%, -50%);
@@ -307,7 +318,6 @@ header nav .menu-content .cart a:hover {
     animation: glowPulse 2s infinite ease-in-out;
 }
 
-/* Banner Heading & Description */
 #banner .shine .heading h2 {
     text-align: left;
     font-size: 70px;
@@ -322,7 +332,6 @@ header nav .menu-content .cart a:hover {
     margin-top: 20px;
 }
 
-/* Banner Buttons */
 #banner .shine .btn {
     margin: 10px;
     margin-left: -15px;
@@ -365,7 +374,6 @@ header nav .menu-content .cart a:hover {
     font-size: 16px;
 }
 
-/* Banner Info Text */
 #banner .shine .text-2 {
     display: flex;
     gap: 5px;
@@ -384,7 +392,6 @@ header nav .menu-content .cart a:hover {
     margin-top: 5px;
 }
 
-/* Banner Image */
 #banner .img {
     position: relative;
     width: 100%;
@@ -445,6 +452,7 @@ header nav .menu-content .cart a:hover {
     object-fit: cover;
     border-radius: 15px;
 }
+
 #choose .col-md-3:nth-child(2) .box,
 #choose .col-md-3:nth-child(3) .box,
 #choose .col-md-3:nth-child(4) .box {
@@ -462,6 +470,7 @@ header nav .menu-content .cart a:hover {
 #choose .box:hover {
     transform: translateY(-10px);
 }
+
 #choose .box .icn {
     display: inline-block;
     width: 60px;
@@ -473,24 +482,29 @@ header nav .menu-content .cart a:hover {
     cursor: pointer;
     transition: 0.8s ease-in-out;
 }
+
 #choose .box .icn i {
     margin-left: 8px;
     font-size: 30px;
 }
+
 #choose .box .icn:hover {
     transform: rotate(360deg);
 }
+
 #choose .box h2 {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 600;
     color: var(--text-color);
 }
+
 #choose .box p {
     margin-top: 20px;
     font-size: 14px;
     color: var(--gray);
 }
+
 #choose .formulated {
     margin-top: 10%;
 }
@@ -556,9 +570,11 @@ header nav .menu-content .cart a:hover {
     font-weight: 600;
     font-size: 15px;
 }
+
 #choose .formulated .explore:hover {
     transform: scale(1.1);
 }
+
 #ready .ready {
     width: 100%;
     height: auto;
@@ -601,47 +617,46 @@ header nav .menu-content .cart a:hover {
     transform: scale(1.05);
 }
 
+/* ABOUT PAGE START */
 
-
-
-
-
-
-
-
-
-
-                        /* ================== ABOUT ==================== */
 #about .heading h2 {
     font-size: 60px;
     margin-top: 5%;
 }
+
 #about .heading p {
     padding: 20px 20%;
 }
+
 #about .container-fluid {
     padding: 0 5%;
 }
+
 #about .content {
     margin-top: 8%;
 }
+
 #about .content .text h2 {
     font-family: var(--righteous);
     margin: 20px 0;
     font-size: 40px;
 }
+
 #about .content .text h2 span {
     color: var(--orange);
 }
+
 #about .content .text p {
     color: var(--gray);
     font-size: 16px;
 }
+
 #about .content .img {
     position: relative;
     width: 100%;
     height: 500px;
 }
+
 #about .content .img::after {
     content: '';
     position: absolute;
@@ -652,21 +667,25 @@ header nav .menu-content .cart a:hover {
     background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
     border-radius: 15px;
 }
+
 #about .content .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
+
 #value .heading h2 {
     font-size: 40px;
     margin-top: 5%;
 }
+
 #value .cont {
     margin: 4% 0;
     margin-bottom: 8%;
     text-align: center;
 }
+
 #value .cont .icn {
     height: 80px;
     width: 80px;
@@ -681,28 +700,34 @@ header nav .menu-content .cart a:hover {
     cursor: pointer;
     transition: 1s ease-in-out;
 }
+
 #value .cont .icn:hover {
     transform: rotate(360deg) scale(1.2);
 }
+
 #value .cont .icn i {
     margin-top: 150px;
     font-size: 35px;
 }
+
 #value .cont .text h2 {
     font-size: 20px;
     font-weight: 700;
     margin: 10px 0;
 }
+
 #value .cont .text p {
     color: var(--gray);
     font-size: 16px;
 }
+
 .timeline {
     width: 80%;
     margin: auto;
     position: relative;
     padding-left: 60px;
 }
+
 .timeline::before {
     content: "";
     position: absolute;
@@ -712,6 +737,7 @@ header nav .menu-content .cart a:hover {
     height: 100%;
     background: var(--orange);
 }
+
 .timeline-item {
     position: relative;
     margin-bottom: 40px;
@@ -719,10 +745,12 @@ header nav .menu-content .cart a:hover {
     transform: translateY(50px);
     transition: all 0.6s ease;
 }
+
 .timeline-item.show {
     opacity: 1;
     transform: translateY(0);
 }
+
 .timeline-item::before {
     content: "";
     position: absolute;
@@ -735,9 +763,11 @@ header nav .menu-content .cart a:hover {
     margin-left: -9px;
     transition: 0.2s ease-in-out;
 }
+
 .timeline-item:hover::before {
     transform: scale(1.5);
 }
+
 .card {
     background: #1a1a1a;
     padding: 20px 25px;
@@ -745,36 +775,44 @@ header nav .menu-content .cart a:hover {
     margin-left: 40px;
     border: 1px solid #2a2a2a;
 }
+
 .card h3 {
     color: var(--orange);
     margin-bottom: 8px;
     font-family: var(--righteous);
 }
+
 .card p {
     color: var(--gray);
     font-size: 16px;
 }
+
 #team .img-box .img {
     position: relative;
     width: 100%;
     height: 350px;
 }
+
 #team .img-box .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
+
 #team .img-box .col-md-4 {
     transition: 0.2s ease-in-out;
 }
+
 #team .img-box .col-md-4:hover {
     transform: translateY(-10px);
 }
+
 #team .img-box .text p {
     margin-top: -6px;
     color: var(--orange);
 }
+
 #team .mission {
     box-shadow: 0 0 1.9px rgba(255, 255, 255, 5);
     text-align: center;
@@ -783,34 +821,39 @@ header nav .menu-content .cart a:hover {
     padding: 4% 6%;
     border-radius: 20px;
 }
+
 #team .mission i {
     font-size: 40px;
 }
+
 #team .mission h2 {
     font-family: var(--righteous);
     font-size: 45px;
     font-weight: 500;
-
 }
+
 #team .mission p {
     margin-top: 20px;
     font-size: 18px;
 }
 
+/* ABOUT PAGE END */
 
+/* PRODUCT PAGE START */
 
-
-                                /* ============== PRODUCT ============= */
 #collections .heading h2 {
     font-size: 60px;
     margin-top: 5%;
 }
+
 #collections .heading p {
     padding: 0 20%;
 }
+
 #collections .product {
     margin-top: 5%;
 }
+
 #collections .vari {
     width: 100%;
     margin-top: 5%;
@@ -856,13 +899,16 @@ header nav .menu-content .cart a:hover {
     border-radius: 30px;
     transition: background 0.3s ease, color 0.3s ease;
 }
+
 #collections .vari .filter-btn .btns.active {
     background: var(--orange);
     color: #fff;
 }
+
 #collections .product .col-md-3 {
     margin-top: 10px;
 }
+
 #collections .product .img {
     position: relative;
     width: 100%;
@@ -872,6 +918,7 @@ header nav .menu-content .cart a:hover {
     background: #1a1a1a;
     border: 1px solid #333 !important;
 }
+
 #collections .product .img img {
     display: block;
     width: 100%;
@@ -879,6 +926,7 @@ header nav .menu-content .cart a:hover {
     object-fit: cover;
     border-radius: 15px 15px 0 0;
 }
+
 #collections .product .img::after {
     content: '\f004';
     position: absolute;
@@ -898,6 +946,7 @@ header nav .menu-content .cart a:hover {
     font-size: 18px;
     z-index: 2;
 }
+
 #collections .product .img .info {
     position: relative;
     width: 100%;
@@ -905,38 +954,43 @@ header nav .menu-content .cart a:hover {
     padding: 15px 22px 20px;
     background: #1a1a1a;
 }
+
 #collections .product .img .info .icon {
     display: flex;
     align-items: center;
     gap: 3px;
 }
+
 #collections .product .img .info .icon i {
     color: var(--orange);
     font-size: 15px;
 }
+
 #collections .product .img .info .icon i:last-of-type {
     color: #555;
 }
+
 #collections .product .img .info .icon p {
     margin: 0 0 0 8px;
     color: #aaa;
     font-size: 13px;
 }
+
 #collections .product .img .info .text h3 {
     margin-top: 12px;
     margin-bottom: 8px;
-
     color: #fff;
     font-size: 20px;
     font-weight: 700;
 }
+
 #collections .product .img .info .text p {
     margin: 0;
-
     color: #aaa;
     font-size: 15px;
     line-height: 1.5;
 }
+
 #collections .product .img .info .price {
     margin-top: 15px;
 }
@@ -947,14 +1001,13 @@ header nav .menu-content .cart a:hover {
 
 #collections .product .img .info .price h2 {
     margin: 0;
-
     color: var(--orange);
     font-size: 24px;
     font-weight: 700;
 }
+
 #collections .product .img .info .price p {
     margin: 0;
-
     color: #888;
     text-align: right;
     text-transform: uppercase;
@@ -962,14 +1015,15 @@ header nav .menu-content .cart a:hover {
     font-size: 12px;
 }
 
+/* PRODUCT PAGE END */
 
+/* SERVICES PAGE START */
 
-
-                                /* ================ SERVICES ================ */
 #services .heading h2 {
     font-size: 60px;
     margin-top: 5%;
 }
+
 #services .heading p {
     padding: 20px 20%;
 }
@@ -983,15 +1037,19 @@ header nav .menu-content .cart a:hover {
     border-radius: 25px;
     transition: 1s ease-in-out;
 }
+
 #services .content .cont .col-md-4:nth-child(3) .box {
     padding-bottom: 17%;
 }
+
 #services .content .cont .col-md-4:nth-child(2) .box {
     padding-bottom: 16%;
 }
-#services .content .cont .box:hover {   
+
+#services .content .cont .box:hover {
     box-shadow: 0 0 5px var(--gray);
 }
+
 #services .content .cont .box .icon {
     height: 70px;
     width: 70px;
@@ -1005,22 +1063,27 @@ header nav .menu-content .cart a:hover {
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
+
 #services .content .cont .box .icon:hover {
     transform: rotate(360deg);
 }
+
 #services .content .cont .box .icon i {
     margin-left: 5px;
     font-size: 35px;
 }
+
 #services .content .cont .box .text h2 {
     font-size: 23px;
     margin: 20px 0;
     font-weight: 700;
 }
+
 #services .content .cont .box .text p {
-        color: var(--gray);
-        font-size: 16px;
+    color: var(--gray);
+    font-size: 16px;
 }
+
 #services .content .cont .box .list ul {
     padding-left: 20px;
 }
@@ -1034,15 +1097,18 @@ header nav .menu-content .cart a:hover {
     color: var(--orange);
     font-size: 20px;
 }
-#work .head  h2{
+
+#work .head h2 {
     margin-top: 5%;
     font-size: 50px;
     font-family: var(--righteous);
     text-align: center;
 }
-#work .head  h2 span {
+
+#work .head h2 span {
     color: var(--orange);
 }
+
 #work .number h2 {
     position: relative;
     display: inline-block;
@@ -1053,10 +1119,12 @@ header nav .menu-content .cart a:hover {
     cursor: pointer;
     transition: 1s ease-in-out;
 }
+
 #work .number h2:hover {
     transform: scale(1.1);
 }
-#work .number h2::after{
+
+#work .number h2::after {
     position: absolute;
     content: '';
     bottom: 22%;
@@ -1067,6 +1135,7 @@ header nav .menu-content .cart a:hover {
     background: linear-gradient(to bottom right, #ff7b00e0, #000);
     opacity: 1;
 }
+
 #work .number .col-md-3:nth-child(2) h2::after,
 #work .number .col-md-3:nth-child(3) h2::after {
     position: absolute;
@@ -1077,19 +1146,23 @@ header nav .menu-content .cart a:hover {
     height: 2px;
     background: linear-gradient(to bottom right, #ff7b00e0, #000);
 }
+
 #work .number .col-md-3:last-child h2::after {
     display: none;
 }
+
 #work .number .text h3 {
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
     font-weight: 700;
 }
+
 #work .number .text p {
     text-align: center;
     color: var(--gray);
 }
+
 #work .box {
     box-shadow: 0 0 1.9px rgba(255, 255, 255, 5);
     text-align: center;
@@ -1098,23 +1171,29 @@ header nav .menu-content .cart a:hover {
     padding: 4% 7%;
     border-radius: 20px;
 }
+
 #work .box .icon {
     font-size: 50px;
 }
+
 #work .box .text-2 h2 {
     font-size: 50px;
     font-weight: 600;
 }
+
 #work .box .text-2 p {
     font-size: 18px;
 }
+
 #need {
     text-align: center;
 }
+
 #need .heading p {
     font-size: 18px;
     color: var(--gray);
 }
+
 #need .btn a {
     display: inline-block;
     padding: 15px;
@@ -1126,19 +1205,19 @@ header nav .menu-content .cart a:hover {
     font-weight: 600;
 }
 
+/* SERVICES PAGE END */
 
+/* CONTACT PAGE START */
 
-
-
-
-                /*======================= CONTACT ========================== */
 #get .touch h2 {
     margin-top: 5%;
 }
+
 #get .touch {
     padding: 0;
     margin-top: 5%;
 }
+
 #get .touch form {
     width: 100%;
     height: auto;
@@ -1147,9 +1226,11 @@ header nav .menu-content .cart a:hover {
     border-radius: 25px;
     transition: 1s ease-in-out;
 }
+
 #get .touch form:hover {
     box-shadow: 0 0 5px var(--gray);
 }
+
 #get .touch form h2 {
     font-size: 30px;
     font-weight: none;
@@ -1157,23 +1238,28 @@ header nav .menu-content .cart a:hover {
     text-align: left;
     margin-left: -10px;
 }
+
 #get .touch form i {
     font-size: 25px;
     margin-right: 10px;
 }
+
 #get .touch form .cont-1 {
     margin-top: 20px;
 }
+
 #get .touch form .cont-1 label {
     display: block;
     font-size: 14px;
     margin-top: 0;
 }
+
 #get .touch form label {
     display: block;
     font-size: 14px;
     margin-top: 30px;
 }
+
 #get .touch form .cont-1 input {
     width: 100%;
     background: var(--bg-color);
@@ -1183,9 +1269,11 @@ header nav .menu-content .cart a:hover {
     font-size: 16px;
     margin-top: 8px;
 }
+
 #get .touch form .cont-1 input:focus {
     outline: 1px solid var(--orange) !important;
 }
+
 #get .touch form textarea,
 #get .touch form select {
     width: 100%;
@@ -1196,13 +1284,16 @@ header nav .menu-content .cart a:hover {
     color: var(--gray);
     margin-top: 8px;
 }
+
 #get .touch form textarea {
     padding: 20px 15px;
     padding-bottom: 15%;
 }
+
 #get .touch form textarea:focus {
     outline: 1px solid var(--orange);
 }
+
 #get .touch form button {
     width: 100%;
     padding: 15px;
@@ -1212,6 +1303,7 @@ header nav .menu-content .cart a:hover {
     color: var(--text-color);
     border-radius: 25px;
 }
+
 #get .touch .box .row {
     display: flex;
     text-align: left;
@@ -1221,9 +1313,11 @@ header nav .menu-content .cart a:hover {
     border-radius: 15px;
     transition: 0.5s ease-in-out;
 }
+
 #get .touch .box .row:hover {
     border: 2px solid var(--orange) !important;
 }
+
 #get .touch .box .row .icon {
     height: 50px;
     width: 50px;
@@ -1237,31 +1331,38 @@ header nav .menu-content .cart a:hover {
     cursor: pointer;
     transition: 0.8s ease-in-out;
 }
+
 #get .touch .box .row .icon i {
     margin-left: 5px;
     font-size: 20px;
 }
+
 #get .touch .box .row .text {
     margin-left: 20px;
     margin-top: -8px;
 }
+
 #get .touch .box .row .text h2 {
     font-weight: 700;
     font-size: 20px;
 }
+
 #get .touch .box .row .text p {
     color: var(--gray);
     font-size: 15px;
 }
+
 #get .touch .box .row .text-2 h2 {
     font-weight: 700;
     font-size: 20px;
     margin-left: 10px;
     margin-top: 10px;
 }
+
 #get .touch .box .row:nth-child(5) {
     padding: 0;
 }
+
 #get .touch .box .row .icons i {
     height: 40px;
     width: 40px;
@@ -1274,9 +1375,11 @@ header nav .menu-content .cart a:hover {
     color: var(--orange);
     cursor: pointer;
 }
+
 #ask .heading h2 {
     font-size: 40px;
 }
+
 #ask .box {
     text-align: left;
     background: #1a1a1a;
@@ -1285,16 +1388,19 @@ header nav .menu-content .cart a:hover {
     padding-right: 10%;
     border-radius: 15px;
 }
+
 #ask .box h2 {
     font-size: 23px;
     font-weight: 700;
     color: var(--orange);
 }
+
 #ask .box p {
     font-size: 16px;
     color: var(--gray);
     margin-bottom: 0;
 }
+
 #ask .visit {
     box-shadow: 0 0 1.9px rgba(255, 255, 255, 5);
     text-align: center;
@@ -1304,8 +1410,7 @@ header nav .menu-content .cart a:hover {
     border-radius: 20px;
 }
 
-
-
+/* CONTACT PAGE END */
 
 footer {
     width: 100%;
@@ -1315,184 +1420,118 @@ footer {
     margin-top: 7%;
     text-align: left;
 }
+
 footer .row {
-    box-shadow:  0 2px 0 rgba(245, 242, 242, 0.2);
+    box-shadow: 0 2px 0 rgba(245, 242, 242, 0.2);
     padding: 20px 0;
 }
+
 footer h2 {
     font-family: var(--righteous);
     margin-top: 0;
     font-size: 30px;
     color: var(--text-color);
 }
+
 footer h2 span {
     color: var(--orange);
 }
+
 footer p {
     color: var(--gray);
     margin-top: 10px;
     font-size: 15px;
 }
+
 footer .icon {
     display: flex;
     gap: 20px;
 }
+
 footer .icon i {
     font-size: 20px;
     color: var(--gray);
 }
+
 footer .head h2 {
     font-size: 17px;
     margin-top: 5px;
     color: var(--text-color);
     font-family: var(--work-sans);
 }
+
 footer .list {
     display: inline-block;
     margin-left: -30px;
     margin-top: 5px;
 }
+
 footer .list ul li {
     font-size: 16px;
     margin-bottom: 5px;
 }
+
 footer .list ul li a {
     color: var(--gray);
 }
+
 footer .text-2 p {
     text-align: center;
     color: var(--gray);
     font-size: 16px;
     margin-top: 20px;
 }
-                /*=================== MEDIA QUERIES ==================== */
-
+                    /* ============ RESPONSIVENESS =========== */
 @media (max-width: 984px) {
     #banner .shine .btn a {
         margin-top: 20px;
     }
+
     #banner .img::before,
     #banner .img h2,
     #banner .img p {
         display: none;
     }
+
     #banner .shine .text-2 {
         display: block;
         margin-top: 15px;
     }
+
     #choose .col-md-3:nth-child(4) .box {
         padding-bottom: 12%;
     }
+
     #choose .col-md-3:nth-child(3) .box {
         padding-bottom: 35%;
     }
+
     #choose .box .icn i {
         margin-left: 5px;
     }
+
     #services .content .cont .col-md-4:nth-child(2) .box {
         padding-bottom: 33%;
     }
+
     #services .content .cont .col-md-4:nth-child(3) .box {
         padding-bottom: 40%;
     }
+
     #services .content .cont .col-md-4:nth-child(4) .box {
         padding-bottom: 15%;
     }
 }
+
 @media (max-width: 982px) {
     header nav {
         padding: 15px 20px;
     }
+
     header nav .logo {
         padding: 0 10px;
     }
-    header nav .menu-content {
-        position: fixed;
-        inset: 0;
-        width: 100%;
-        height: 100vh;
-        background: black;
-        display: block;
-        text-align: center;
-        transform: translateX(100%);
-        transition: transform .5s ease;
-        opacity: 0;
-        visibility: hidden;
-        /* z-index: 9999; */
-    }
-    header nav.active .menu-content {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
-    }
-    header nav .menu-content ul {
-        margin: 10% 0 0;
-    }
-    header nav .menu-content ul li {
-        display: block;
-        padding: 15px 0;
-    }
-    header nav .menu-content ul li a {
-        font-size: 25px;
-        font-weight: 700;
-    }
-    header nav .btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 44px;          /* Standard touch & click target width */
-        height: 44px;         /* Standard touch & click target height */
-        padding: 10px;
-        cursor: pointer;
-        background: transparent;
-        z-index: 1001;
-    }
-    /* Hamburger Icon Lines */
-    header nav .btn .menu-btn {
-        position: relative;
-        width: 26px;
-        height: 2px;
-        background: #fff;
-        border-radius: 2px;
-        pointer-events: none; /* Passes clicks directly to the .btn container */
-        transition: all 0.3s ease-in-out;
-    }
-    header nav .btn .menu-btn::before,
-    header nav .btn .menu-btn::after {
-        content: '';
-        position: absolute;
-        width: 26px;
-        height: 2px;
-        background: #fff;
-        border-radius: 2px;
-        pointer-events: none;
-        transition: all 0.3s ease-in-out;
-    }
 
-    header nav .btn .menu-btn::before {
-        top: -8px;
-        left: 0;
-    }
-
-    header nav .btn .menu-btn::after {
-        bottom: -8px;
-        left: 0;
-    }
-    /* Active Hamburger State (X Icon) */
-    header nav.active .btn .menu-btn {
-        background: transparent;
-    }
-
-    header nav.active .btn .menu-btn::before {
-        top: 0;
-        transform: rotate(45deg);
-    }
-
-    header nav.active .btn .menu-btn::after {
-        bottom: 0;
-        transform: rotate(-45deg);
-    }
-    /* Fullscreen Drawer Menu */
     header nav .menu-content {
         position: fixed;
         inset: 0;
@@ -1527,17 +1566,67 @@ footer .text-2 p {
     header nav .menu-content ul li {
         padding: 5px 0;
     }
-
     header nav .menu-content ul li a {
         font-size: 22px;
         font-weight: 600;
         padding-bottom: 6px;
     }
-
     header nav .menu-content ul li a::after {
         height: 3px;
     }
-
+    header nav .menu-content ul li.active a::after {
+        width: 80%;
+    }
+    header nav .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        cursor: pointer;
+        background: transparent;
+        z-index: 1001;
+    }
+    header nav .btn .menu-btn {
+        position: relative;
+        width: 26px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+    header nav .btn .menu-btn::before,
+    header nav .btn .menu-btn::after {
+        content: '';
+        position: absolute;
+        width: 26px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+    header nav .btn .menu-btn::before {
+        top: -8px;
+        left: 0;
+    }
+    header nav .btn .menu-btn::after {
+        bottom: -8px;
+        left: 0;
+    }
+    header nav.active .btn .menu-btn {
+        background: transparent;
+    }
+    header nav.active .btn .menu-btn::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    header nav.active .btn .menu-btn::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
     header nav .menu-content .cart a {
         padding: 12px 30px;
         font-size: 17px;
@@ -1547,16 +1636,17 @@ footer .text-2 p {
     #choose .box {
         margin-bottom: 20px;
     }
+
     footer .col-md-3 {
         margin-bottom: 20px;
     }
 }
 @media (max-width: 422px) {
     #about .heading h2,
-     #services .heading h2,
-     #collections .heading h2 {
+    #services .heading h2,
+    #collections .heading h2 {
         font-size: 40px;
-    }    
+    }
     #about .heading p,
     #services .heading p,
     #collections .heading p {
@@ -1590,7 +1680,6 @@ footer .text-2 p {
         margin-bottom: 10px;
     }
     #ask .container-fluid {
-        padding: 0 3%!important;
+        padding: 0 3% !important;
     }
 }
-
