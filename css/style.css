@@ -11,7 +11,29 @@
     text-decoration: none!important;
     border: none!important;
 }
-
+@view-transition {
+    navigation: auto;
+}
+::view-transition-group(*){
+    animation-duration: 1s;
+}
+::view-transition-old(root){
+    animation: slide-out .5s ease forwards;
+}
+::view-transition-new(root){
+    animation: slide-in .5s ease forwards;
+}
+@keyframes slide-out {
+    to {
+        transform: translateX(-80px);
+    }
+}
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+}
 :root {
     --bg-color: #0b0b0b;
     --orange: #FF7A00;
@@ -103,7 +125,7 @@ body {
 }
 
 /* ============================================= */
-/* HEADER AND NAVIGATION (DESKTOP)               */
+/* HEADER AND NAVIGATION */
 /* ============================================= */
 header {
     position: sticky;
@@ -136,7 +158,7 @@ header nav .btn {
     margin: 0;
 }
 
-/* Logo */
+/* Logo Styles */
 header nav .logo h2 {
     font-family: var(--righteous);
     font-weight: 400;
@@ -145,22 +167,19 @@ header nav .logo h2 {
     cursor: pointer;
     transition: transform 0.4s ease-in-out;
 }
-
 header nav .logo h2:hover {
     transform: scale(1.05);
 }
-
 header nav .logo h2 span {
     color: var(--orange);
 }
 
-/* Menu Content Container */
+/* Menu Styles */
 header nav .menu-content {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
 header nav .menu-content ul {
     display: flex;
     align-items: center;
@@ -168,7 +187,6 @@ header nav .menu-content ul {
     padding: 0;
     list-style: none;
 }
-
 header nav .menu-content ul li {
     position: relative;
     padding: 8px 16px;
@@ -186,7 +204,8 @@ header nav .menu-content ul li a {
     padding-bottom: 4px;
 }
 
-header nav .menu-content ul li a::after {
+header nav .menu-content ul li::after {
+    position: absolute;
     content: '';
     position: absolute;
     bottom: 0;
@@ -199,15 +218,18 @@ header nav .menu-content ul li a::after {
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-header nav .menu-content ul li:hover a {
-    color: var(--orange) !important;
+header nav .menu-content ul li:hover::after {
+    width: 80%;
+    color: var(--orange);
 }
 
-header nav .menu-content ul li:hover a::after {
-    width: 100%;
+header nav .menu-content ul li a {
+    font-size: 18px;
+    color: var(--black) !important;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--Allura);
 }
-
-/* Cart Button */
 header nav .menu-content .cart {
     margin: 0;
 }

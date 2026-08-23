@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.classList.add('show');
     });
 
+<<<<<<< Updated upstream
     // 3. Product Filter Functionality
     const filterButtons = document.querySelectorAll('.filter-btn .btns');
     
@@ -48,3 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+=======
+const navItems = document.querySelectorAll(
+    'header nav .menu-content ul li'
+);
+>>>>>>> Stashed changes
