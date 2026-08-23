@@ -100,13 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
             productItems.forEach(item => {
 
                 const categoryElement = item.querySelector(
-                    '.price p'
+                    '.head p'
                 );
 
                 const category = categoryElement
                     ? categoryElement.textContent.trim().toLowerCase()
                     : '';
-
 
                 if (
                     filterValue === 'all' ||

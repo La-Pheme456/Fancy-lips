@@ -955,29 +955,34 @@ header nav .menu-content .cart a:hover {
     background: #1a1a1a;
 }
 
-#collections .product .img .info .icon {
+#collections .product .img .info .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#collections .product .img .info .head .icon {
     display: flex;
     align-items: center;
     gap: 3px;
 }
 
-#collections .product .img .info .icon i {
+#collections .product .img .info .head .icon i {
     color: var(--orange);
     font-size: 15px;
 }
 
-#collections .product .img .info .icon i:last-of-type {
+#collections .product .img .info .head .icon i:last-of-type {
     color: #555;
+    margin-right: 200px;
 }
-
-#collections .product .img .info .icon p {
+#collections .product .img .info .head p {
     margin: 0 0 0 8px;
-    color: #aaa;
+    color: #ffffff96;
     font-size: 13px;
 }
 
 #collections .product .img .info .text h3 {
-    margin-top: 12px;
+    margin-top: 10px;
     margin-bottom: 8px;
     color: #fff;
     font-size: 20px;
@@ -1005,15 +1010,56 @@ header nav .menu-content .cart a:hover {
     font-size: 24px;
     font-weight: 700;
 }
-
-#collections .product .img .info .price p {
-    margin: 0;
-    color: #888;
-    text-align: right;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+#collections .product .img .info .price .cont {
+    margin-left: 15px;
+    color: var(--orange);
+    background: #ff7b001f;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #FF7A00 !important;
+    padding: 3px 1px;
+}
+#collections .product .img .info .price .cont i {
     font-size: 12px;
 }
+#collections .product .img .info .price .cont p {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+#collections .get {
+    box-shadow: 0 0 1.9px rgba(255, 255, 255, 5);
+    text-align: center;
+    margin-top: 60px;
+    background: linear-gradient(to bottom right, #ff7b00e0, #f89f57);
+    padding: 4% 29%;
+    border-radius: 20px;
+}
+#collections .get h2 {
+    font-family: var(--righteous);
+    font-size: 45px;
+    font-weight: 500;
+}
+#collections .get p {
+    margin-top: 20px;
+    font-size: 15px;
+}
+#collections .get .box input {
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    color: var(--text-color);
+    background: #ffffff46;
+}
+#collections .get .box button {
+    padding: 10px 20px;
+    color: var(--orange);
+    background: var(--white);
+    border-radius: 20px;
+    font-weight: 600;
+}
+
 
 /* PRODUCT PAGE END */
 
