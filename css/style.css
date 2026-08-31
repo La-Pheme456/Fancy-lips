@@ -1718,7 +1718,7 @@ footer .text-2 p {
         padding: 0 10px;
     }
     #collections .container-fluid {
-        padding: 0 2px;
+        padding: 0 4% !important;
     }
     #collections .vari .col-md {
         display: flex;
