@@ -1688,6 +1688,9 @@ footer .text-2 p {
         padding: 12px 30px;
         font-size: 17px;
     }
+    #collections .get input {
+        margin-bottom: 10px;
+    }
     #collections .get {
         padding: 20px;
     }
