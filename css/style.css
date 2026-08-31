@@ -1688,6 +1688,12 @@ footer .text-2 p {
         padding: 12px 30px;
         font-size: 17px;
     }
+    #collections .get {
+        padding: 20px;
+    }
+    #collections .container-fluid {
+        padding: 0 4% !important;
+    }
 }
 @media (max-width: 767px) {
     #choose .box {
@@ -1716,9 +1722,6 @@ footer .text-2 p {
     #collections .heading p {
         font-size: 17px;
         padding: 0 10px;
-    }
-    #collections .container-fluid {
-        padding: 0 4% !important;
     }
     #collections .vari .col-md {
         display: flex;
