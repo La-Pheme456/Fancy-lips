@@ -123,19 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
 let add = document.querySelectorAll('.price .cont .add');
 let cartCount = 0;
     add.forEach((button) => {
-    button.addEventListener('click', () => {
-        button.querySelector('p').textContent = 'Added';
-        button.querySelector('i').className = 'bi bi-check-lg';
-        button.classList.add('added');
-        setTimeout(() => {
-        button.querySelector('p').textContent = 'Add';
-        button.querySelector('i').className = 'bi bi-cart';
-        button.classList.remove('added');
-    }, 3000);
-        cartCount++;
-        let show = document.querySelector('.cart .show');
-        show.style.display = 'block';
-        show.textContent = cartCount;
+        button.addEventListener('click', () => {
+            button.querySelector('p').textContent = 'Added';
+            button.querySelector('i').className = 'bi bi-check-lg';
+            button.classList.add('added');
+            setTimeout(() => {
+                button.querySelector('p').textContent = 'Add';
+                button.querySelector('i').className = 'bi bi-cart';
+                button.classList.remove('added');
+            }, 3000);
+            cartCount++;
+            let show = document.querySelector('.cart .show');
+            show.style.display = 'block';
+            show.textContent = cartCount;
         });
     });
 });
