@@ -245,6 +245,7 @@ header nav .menu-content .cart {
 }
 
 header nav .menu-content .cart{
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -263,6 +264,20 @@ header nav .menu-content .cart i {
 header nav .menu-content .cart:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(255, 122, 0, 0.4);
+}
+header nav .menu-content .cart .show {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    color: var(--orange);
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 50%;
+    display: none;
 }
 
 .heading h2 {
@@ -1009,23 +1024,32 @@ header nav .menu-content .cart:hover {
     font-size: 24px;
     font-weight: 700;
 }
-#collections .product .img .info .price .cont {
+#collections .product .img .info .price .cont .add {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     margin-left: 15px;
     color: var(--orange);
     background: #ff7b001f;
     text-align: center;
     border-radius: 20px;
     border: 1px solid #FF7A00 !important;
-    padding: 3px 1px;
+    padding: 7px 15px !important;
 }
-#collections .product .img .info .price .cont i {
+#collections .product .img .info .price .cont .add i {
     font-size: 12px;
 }
-#collections .product .img .info .price .cont p {
+#collections .product .img .info .price .cont .add p {
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 0;
     font-size: 12px;
+}
+#collections .product .img .info .price .cont .add.added {
+    background: rgb(0, 44, 0);
+    color: green;
+    border: 1px solid green !important;
 }
 #collections .get {
     box-shadow: 0 0 1.9px rgba(255, 255, 255, 5);
