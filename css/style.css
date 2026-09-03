@@ -1133,7 +1133,7 @@ header nav .menu-content .cart .show {
     width: 100%;
     min-height: auto;
     padding: 0 3%;
-    display: none;
+    /* display: none; */
 }
 
 #select-product .cart-wrapper {
