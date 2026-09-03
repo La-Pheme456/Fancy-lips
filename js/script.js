@@ -121,29 +121,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    let add = document.querySelectorAll('.price .cont .add');
-    let cartCount = JSON.parse(localStorage.getItem('cartQuantity')) || 0;
+        let add = document.querySelectorAll('.price .cont .add');
+    let cartCount = JSON.parse(sessionStorage.getItem('cartQuantity')) || 0;
     let show = document.querySelector('.cart .show');
-    if(show) {
-        show.textContent = cartCount
+
+    if (show) {
+        show.textContent = cartCount;
         show.style.display = cartCount > 0 ? 'block' : 'none';
     }
+
     add.forEach((button) => {
         button.addEventListener('click', () => {
             button.querySelector('p').textContent = 'Added';
             button.querySelector('i').className = 'bi bi-check-lg';
             button.classList.add('added');
+
             setTimeout(() => {
                 button.querySelector('p').textContent = 'Add';
                 button.querySelector('i').className = 'bi bi-cart';
                 button.classList.remove('added');
             }, 3000);
-            cartCount++
-            localStorage.setItem("cartQuantity", JSON.stringify(cartCount))
+
+            cartCount++;
+            sessionStorage.setItem("cartQuantity", JSON.stringify(cartCount));
+
             if (show) {
                 show.textContent = cartCount;
                 show.style.display = 'block';
             }
         });
     });
+    
 });
