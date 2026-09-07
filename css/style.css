@@ -2199,6 +2199,10 @@ footer .text-2 p {
     #select-product .cart-heading h1 {
         font-size: clamp(42px, 8vw, 58px);
     }
+    #box .cont {
+        padding: 19%;
+    }
+
 }
 @media (max-width: 767px) {
     #choose .box {
