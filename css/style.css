@@ -173,6 +173,7 @@ header nav .logo h2 {
     font-size: 28px;
     cursor: pointer;
     transition: transform 0.4s ease-in-out;
+    color: var(--text-color);
 }
 
 header nav .logo h2:hover {
@@ -1199,15 +1200,11 @@ header nav .menu-content .cart .show {
     align-items: start;
     text-align: left;
 }
-
-#select-product .cart-products {
-    width: 100%;
-}
-
 #select-product .cart-product {
     width: 100%;
     min-height: 210px;
     display: flex;
+    margin-bottom: 5%;
     overflow: hidden;
     background: #1a1a1a;
     border: 1px solid #292929 !important;
@@ -1216,13 +1213,13 @@ header nav .menu-content .cart .show {
         transform .3s ease,
         border-color .3s ease,
         box-shadow .3s ease;
-    animation: cartProductIn .6s ease both;
-}
-
-#select-product .cart-product:hover {
-    transform: translateY(-2px);
-    border-color: #3a3a3a !important;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+        animation: cartProductIn .6s ease both;
+    }
+    
+    #select-product .cart-product:hover {
+        transform: translateY(7px);    
+        border-color: #3a3a3a !important;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
 }
 
 #select-product .product-image {
@@ -1353,6 +1350,8 @@ header nav .menu-content .cart .show {
 }
 
 #select-product .order-summary {
+    position: sticky;
+    top: 100px;
     width: 100%;
     padding: 38px;
     background: #1a1a1a;
