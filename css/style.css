@@ -1438,11 +1438,13 @@ header nav .menu-content .cart .show {
 }
 
 #select-product .checkout-btn {
+    position: relative;
     width: 100%;
     height: 74px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20%;
     gap: 12px;
     background: var(--orange);
     border: none;
@@ -1456,6 +1458,32 @@ header nav .menu-content .cart .show {
         transform .3s ease,
         background .3s ease,
         box-shadow .3s ease;
+    }
+#select-product .checkout-btn::before {
+    content: '';
+    position: absolute;
+    bottom: -25%;
+    right: 35%;
+    width: 25px;
+    height: 30px;
+    border: 2px solid var(--white); 
+    border-top: none;
+    border-right: none; 
+    border-bottom-left-radius: 20px;
+    z-index: -1;
+}
+#select-product .checkout-btn::after {
+    content: 'Coming soon';
+    position: absolute;
+    bottom: -40%;
+    right: 9%;
+    width: 100px;
+    height: auto;
+    background: var(--white);
+    transform: rotate(4deg);
+    color: red;
+    font-size: 15px;
+    border-radius: 10px;
 }
 
 #select-product .checkout-btn:hover {
@@ -1483,24 +1511,24 @@ header nav .menu-content .cart .show {
 }
 
 .whatsapp-btn {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 56px;
-    height: 56px;
+    width: 100%;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #25d366;
-    border-radius: 50%;
-    color: #fff !important;
-    font-size: 27px;
-    text-decoration: none !important;
-    box-shadow: 0 7px 20px rgba(0, 0, 0, .3);
-    z-index: 100;
-    animation: whatsappIn .6s ease both;
+    gap: 12px;
+    background: rgb(37, 211, 102);
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 40px;
+    color: var(--white);
+    font-family: var(--work-sans);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
     transition:
         transform .3s ease,
+        background .3s ease,
         box-shadow .3s ease;
 }
 
@@ -2202,7 +2230,12 @@ footer .text-2 p {
     #box .cont {
         padding: 19%;
     }
-
+    #select-product .checkout-btn::after {
+        margin-right: 15%;
+    }
+    #select-product .checkout-btn {
+        margin-bottom: 10%;
+    }
 }
 @media (max-width: 767px) {
     #choose .box {
@@ -2288,13 +2321,6 @@ footer .text-2 p {
     #select-product .checkout-btn {
         height: 65px;
         font-size: 17px;
-    }
-    .whatsapp-btn {
-        right: 18px;
-        bottom: 18px;
-        width: 52px;
-        height: 52px;
-        font-size: 24px;
     }
 }
 @media (max-width: 450px) {
