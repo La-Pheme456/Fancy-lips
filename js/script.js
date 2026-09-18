@@ -234,7 +234,67 @@
         }
       }
     }
-
     displayCart();
+  }
+    // Order via WhatsApp
+  let whatsappButton = document.querySelector('.whatsapp-btn');
+
+  if (whatsappButton) {
+    whatsappButton.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      let currentCart = JSON.parse(sessionStorage.getItem('cartProducts')) || [];
+
+      if (currentCart.length === 0) {
+        alert('Your cart is empty. Please add a product before ordering.');
+        return;
+      }
+
+      let orderMessage = `Hello Fancy Lips
+
+I would like to place an order for the following items:
+
+*Order Details*
+
+`;
+
+      currentCart.forEach((product, index) => {
+        let itemTotal = product.price * product.quantity;
+
+        orderMessage += `${index + 1}. *${product.name}*
+Category: ${product.category}
+Quantity: ${product.quantity}
+Price: $${product.price.toFixed(2)} each
+Item Total: $${itemTotal.toFixed(2)}
+
+`;
+      });
+
+      let subtotal = currentCart.reduce(
+        (total, product) => total + (product.price * product.quantity),
+        0
+      );
+
+      let shipping = subtotal >= 75 ? 0 : 5.99;
+      let tax = subtotal * 0.08;
+      let grandTotal = subtotal + shipping + tax;
+
+      orderMessage += `─────────────
+Subtotal: $${subtotal.toFixed(2)}
+Shipping: ${shipping === 0 ? 'FREE' : '$' + shipping.toFixed(2)}
+Tax (8%): $${tax.toFixed(2)}
+*Grand Total: $${grandTotal.toFixed(2)}*
+
+Please let me know the next steps for completing my order.
+
+Thank you!`;
+
+      let whatsappNumber = '2348021291539';
+
+      let whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`;
+
+      window.open(whatsappURL, '_blank');
+    });
   }
 });
