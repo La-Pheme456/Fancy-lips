@@ -289,7 +289,7 @@ Please let me know the next steps for completing my order.
 
 Thank you!`;
 
-      let whatsappNumber = '2348021291539';
+      let whatsappNumber = '2348103964532';
 
       let whatsappURL =
         `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`;
