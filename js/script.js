@@ -288,7 +288,6 @@ Tax (8%): $${tax.toFixed(2)}
 Please let me know the next steps for completing my order.
 
 Thank you!`;
-
       let whatsappNumber = '2348103964532';
 
       let whatsappURL =
