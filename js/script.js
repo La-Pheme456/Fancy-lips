@@ -1,4 +1,19 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+﻿window.addEventListener("load", () => {
+    const preloader = document.querySelector(".preloader");
+
+    if(!preloader) return;
+
+    requestAnimationFrame(() => {
+        preloader.classList.add("hide");
+
+        preloader.addEventListener("transitionend", () => {
+            preloader.remove();
+        }, { once: true });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
   let menuButton = document.querySelector('.btn');
   let menuContent = document.querySelector('nav');
 
