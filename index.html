@@ -29,10 +29,8 @@
                     <h2>Fancy <span>Lips</span></h2>
                 </div>
             </a>
-            <div class="btn">
-                <div class="menu-btn"></div>
-            </div>
-            <div class="menu-content">
+            <button class="btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation"><span class="menu-btn" aria-hidden="true"></span></button>
+            <div class="menu-content" id="primary-navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -47,7 +45,6 @@
             </div>
         </nav>
     </header>
-
 
     <section id="banner" >
         <div class="container wow animate__animated animate__fadeIn" data-wow-delay="0.5s">
@@ -160,7 +157,7 @@
                             </ul>
                         </div>
                         <div class="explore">
-                            <button class="btn"><a href="products.html"> Explore Products</a></button>
+                            <a class="btn" href="products.html">Explore Products</a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +172,7 @@
                 <p>Join thousands of satisfied customers who trust Fancy Lips for their beauty needs. </p>
             </div>
             <div class="get">
-                <button class="btn"><a href="contact.html">Get In Touch</a></button>
+                <a class="btn" href="contact.html">Get In Touch</a>
             </div>
         </div>
     </section>
@@ -230,8 +227,8 @@
                     </div>
                     <div class="info">
                         <p><i class="bi bi-geo-alt"></i> 22 Rashidi Bello Street, Ikotun, Lagos, Nigeria</p>
-                        <p><i class="bi bi-telephone"></i> +1 (555) 123-4567</p>
-                        <p><i class="bi bi-envelope"></i> hello@fancylips.com</p>
+                        <p><i class="bi bi-telephone"></i> <a href="https://wa.me/2348103964532">WhatsApp: +234 810 396 4532</a></p>
+                        <p><i class="bi bi-envelope"></i> <a href="https://wa.me/2348103964532">Contact us on WhatsApp</a></p>
                     </div>
                 </div>
             </div>
@@ -241,15 +238,14 @@
         </div>
     </footer>
     <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <!-- WOW.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
     <!-- Custom JS File -->
+    <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

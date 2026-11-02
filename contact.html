@@ -29,10 +29,8 @@
                     <h2>Fancy <span>Lips</span></h2>
                 </div>
             </a>
-            <div class="btn">
-                <div class="menu-btn"></div>
-            </div>
-            <div class="menu-content">
+            <button class="btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation"><span class="menu-btn" aria-hidden="true"></span></button>
+            <div class="menu-content" id="primary-navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -48,7 +46,6 @@
         </nav>
     </header>
 
-    
     <section id="get">
         <div class="container-fluid px-5">
             <div class="touch">
@@ -101,7 +98,7 @@
                                 <div class="col-md-10">
                                     <div class="text">
                                         <h2>phone</h2>
-                                        <p>(555) 123-4567</p>
+                                        <p><a href="https://wa.me/2348103964532">+234 810 396 4532</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -113,8 +110,8 @@
                                 </div>
                                 <div class="col-md-10">
                                     <div class="text">
-                                        <h2>Email</h2>
-                                        <p>hello@fancylips.com</p>
+                                        <h2>Message us</h2>
+                                        <p><a href="https://wa.me/2348103964532">Contact us on WhatsApp</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -200,16 +197,6 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-    
    <footer>
         <div class="container-fluid px-5">
             <div class="row">
@@ -260,8 +247,8 @@
                     </div>
                     <div class="info">
                         <p><i class="bi bi-geo-alt"></i> 22 Rashidi Bello Street, Ikotun, Lagos, Nigeria</p>
-                        <p><i class="bi bi-telephone"></i> +1 (555) 123-4567</p>
-                        <p><i class="bi bi-envelope"></i> hello@fancylips.com</p>
+                        <p><i class="bi bi-telephone"></i> <a href="https://wa.me/2348103964532">WhatsApp: +234 810 396 4532</a></p>
+                        <p><i class="bi bi-envelope"></i> <a href="https://wa.me/2348103964532">Contact us on WhatsApp</a></p>
                     </div>
                 </div>
             </div>
@@ -270,25 +257,9 @@
             <p>© 2026 Fancy Lips. All rights reserved. Made with ♥ for beauty lovers.</p>
         </div>
     </footer>
-    
-    <!-- Bootstrap JS Bundle Installation -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS Bundle Installation -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".swiper", {
-            loop: true,
-            autoplay: {
-                delay: 3000,
-            },
-        });
-    </script>
+
     <!-- Custom JS File -->
+    <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
