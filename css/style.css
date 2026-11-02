@@ -1146,7 +1146,7 @@ header nav .menu-content .cart .show {
 #collections .product .img .info .price .cont .add i {
     font-size: 12px;
 }
-#collections .product .img .info .price .cont .add p {
+#collections .product .img .info .price .cont .add .add-label {
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 0;
@@ -2575,4 +2575,16 @@ footer .text-2 p {
     #select-product .order-summary {
         padding: 17px;
     }
+}
+/* Visible keyboard focus overrides the original global outline reset. */
+:focus-visible { outline: 3px solid var(--orange) !important; outline-offset: 4px; }
+header nav .menu-toggle { background: transparent; color: inherit; }
+.cart-status { position: fixed; left: 1rem; bottom: 1rem; z-index: 2000; max-width: min(90vw, 36rem); background: #161616; color: #fff; border-radius: 8px; }
+.cart-status:not(:empty) { padding: 12px 18px; }
+.quantity-btn:disabled { opacity: .4; cursor: not-allowed; }
+.whatsapp-btn { display: inline-block; padding: 14px 18px; border-radius: 8px; background: #126b37; color: white; font-weight: 600; }
+.secure-checkout p { color: #bdbdbd; font-size: 14px; line-height: 1.6; }
+footer .info a { color: inherit; text-decoration: underline !important; text-underline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

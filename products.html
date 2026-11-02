@@ -21,6 +21,7 @@
         </div>
         <div class="loading"></div>
     </div>
+    <p id="cart-status" class="cart-status" role="status" aria-live="polite"></p>
     <header>
         <nav>
             <a href="products.html">
@@ -28,10 +29,8 @@
                     <h2>Fancy <span>Lips</span></h2>
                 </div>
             </a>
-            <div class="btn">
-                <div class="menu-btn"></div>
-            </div>
-            <div class="menu-content">
+            <button class="btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation"><span class="menu-btn" aria-hidden="true"></span></button>
+            <div class="menu-content" id="primary-navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -102,7 +101,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="cont">
-                                                    <button class="add" data-id="1" data-name="Rose Gold Shimmer" data-price="24.99"><i class="bi bi-cart"></i><p>add</p></button>
+                                                    <button class="add" data-id="1" data-name="Rose Gold Shimmer" data-price="24.99"><i class="bi bi-cart"></i><span class="add-label">Add</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -137,7 +136,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="cont">
-                                                    <button class="add"><i class="bi bi-cart"></i><p>add</p></button>
+                                                    <button class="add"><i class="bi bi-cart"></i><span class="add-label">Add</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -172,7 +171,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="cont">
-                                                    <button class="add"><i class="bi bi-cart"></i><p>add</p></button>
+                                                    <button class="add"><i class="bi bi-cart"></i><span class="add-label">Add</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -207,7 +206,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="cont">
-                                                    <button class="add"><i class="bi bi-cart"></i><p>add</p></button>
+                                                    <button class="add"><i class="bi bi-cart"></i><span class="add-label">Add</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -242,7 +241,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="cont">
-                                                    <button class="add"><i class="bi bi-cart"></i><p>add</p></button>
+                                                    <button class="add"><i class="bi bi-cart"></i><span class="add-label">Add</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -277,7 +276,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="cont">
-                                                    <button class="add"><i class="bi bi-cart"></i><p>add</p></button>
+                                                    <button class="add"><i class="bi bi-cart"></i><span class="add-label">Add</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -312,7 +311,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="cont">
-                                                    <button class="add"><i class="bi bi-cart"></i><p>add</p></button>
+                                                    <button class="add"><i class="bi bi-cart"></i><span class="add-label">Add</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -347,7 +346,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="cont">
-                                                    <button class="add"><i class="bi bi-cart"></i><p>add</p></button>
+                                                    <button class="add"><i class="bi bi-cart"></i><span class="add-label">Add</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -417,8 +416,8 @@
                     </div>
                     <div class="info">
                         <p><i class="bi bi-geo-alt"></i> 22 Rashidi Bello Street, Ikotun, Lagos, Nigeria</p>
-                        <p><i class="bi bi-telephone"></i> +1 (555) 123-4567</p>
-                        <p><i class="bi bi-envelope"></i> hello@fancylips.com</p>
+                        <p><i class="bi bi-telephone"></i> <a href="https://wa.me/2348103964532">WhatsApp: +234 810 396 4532</a></p>
+                        <p><i class="bi bi-envelope"></i> <a href="https://wa.me/2348103964532">Contact us on WhatsApp</a></p>
                     </div>
                 </div>
             </div>
@@ -427,12 +426,7 @@
             <p>© 2026 Fancy Lips. All rights reserved. Made with ♥ for beauty lovers.</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
